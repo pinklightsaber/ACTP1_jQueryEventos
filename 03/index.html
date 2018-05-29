@@ -16,6 +16,8 @@
 		2.a Revisa la diferencia entre los métodos append y before, ¿logras notar
 		la diferencia?
 
+
+
 	3. Seleccionar el li que contiene el link número 6 e inserta por medio del
 	método prepend el string con el emoji: '😎 ' (emoji de la cara con los
 	anteojos de sol)
@@ -43,6 +45,7 @@
 	<meta charset="utf-8">
 	<title>Ejercicio 03</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0"></head>
+	<script src="../_assets/js/jquery-3.3.1.min.js"></script>
 <body>
 
 	<nav class="navbar">
@@ -60,6 +63,20 @@
 			<li><a href="#">link 9</a></li>
 		</ul>
 	</nav>
+	
+	<script>
+		$(document).ready(function(){
+
+			var sexto = $('li a').eq(5);
+
+			$('li').eq(3).append('<ul><li><a href="#">link 4.a</a></li></ul>').before('<li><a href="#">link 3.5</a></li>'); 
+			sexto.prepend('😎').after('🙂');
+
+			console.log(sexto.text())
+		});
+
+	 </script>
+
 
 </body>
 </html>
