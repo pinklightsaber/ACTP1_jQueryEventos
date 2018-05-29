@@ -44,5 +44,21 @@
   <button class="add_name">+</button>
   <ul class="names"></ul>
 
+  <script>
+    $(document).ready(function(){
+      $(".add_name").click(function(){ 
+      name = prompt('Por favor, ingresa tu nombre', '');
+      $('.names').append('<li><span>'+ name+ '</span> <a href ="#" class="remove_name"> Borra </a> </li>');
+      });
+
+      $('.names').on('click', '.remove_name', function(){
+        $(this).parent().remove();
+         });
+
+     
+      
+    });
+  </script>
+
 </body>
 </html>
