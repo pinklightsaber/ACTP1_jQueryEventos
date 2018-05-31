@@ -46,12 +46,15 @@
 
   <script>
     $(document).ready(function(){
+
       $(".add_name").click(function(){ 
-      name = prompt('Por favor, ingresa tu nombre', '');
-      $('.names').append('<li><span>'+ name+ '</span> <a href ="#" class="remove_name"> Borra </a> </li>');
+        var name = prompt('Por favor, ingresa tu nombre', '');
+
+      $('.names').append('<li><span>'+ name + '</span> <a href ="#" class="remove_name"> Borra </a> </li>');
       });
 
-      $('.names').on('click', '.remove_name', function(){
+      $('.names').on('click', '.remove_name', function(event){
+        event.preventDefault();
         $(this).parent().remove();
          });
 

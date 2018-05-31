@@ -69,8 +69,12 @@
 
 			var sexto = $('li a').eq(5);
 
-			$('li').eq(3).append('<ul><li><a href="#">link 4.a</a></li></ul>').before('<li><a href="#">link 3.5</a></li>'); 
-			sexto.prepend('😎').after('🙂');
+			$('li').eq(3)
+			.append('<ul><li><a href="#">link 4.a</a></li></ul>')
+			.before('<li><a href="#">link 3.5</a></li>'); 
+			sexto
+			.prepend('😎')
+			.after('🙂');
 
 			console.log(sexto.text())
 		});
